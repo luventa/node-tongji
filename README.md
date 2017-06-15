@@ -2,17 +2,33 @@
 
 This is a module for Baidu Tongji Api of Node.js 7.6+
 
-这特么是个百度统计的Node.js模块，用来写其他的定时同步任务之类的...
+百度统计Api的Node.js模块，调用它来做其他的定时任务、统计数据同步之类的...
 
-因为百度官方就给了个PHP的例子，所以花了点时间写了个js版本的大家可以参考
+百度官方就特么给了个PHP的例子，所以花了点时间写了个js版本供大家使用和参考
 
-喜欢的话就给个星吧，蟹蟹各位大佬
+喜欢的话就给个星星吧，蟹蟹各位大佬
 
 ## Installation 安装方式
 
 ```
 $ npm install node-tongji --save
 ```
+
+
+## Config 配置
+
+配置项`config`中需要包含以下基础字段
+
+| Name          | Description                       | Type   |
+| ------------- |:---------------------------------:| ------:|
+| username      | 登录百度统计使用的用户名          | string |
+| password      | 登录百度统计使用的密码            | string |
+| token         | 在百度统计控制台中申请的token     | string |
+| uuid          | 随便起一个乱七八糟的东西就行      | string |
+
+日志的输出等级和输出方式是可以配置的，也是在`config`中增加字段和值
+
+配置`logLevel`可以设定日志输出的等级
 
 
 ## Examples 示例
