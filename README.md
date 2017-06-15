@@ -1,9 +1,11 @@
 # node-tongji
 
 This is a module for Baidu Tongji Api of Node.js 7.6+
+
 这特么是个百度统计的Node.js模块，用来写其他的定时同步任务之类的...
 
 因为百度官方就给了个PHP的例子，所以花了点时间写了个js版本的大家可以参考
+
 喜欢的话就给个星吧，蟹蟹各位大佬
 
 ## Installation 安装方式
