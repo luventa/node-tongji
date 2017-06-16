@@ -1,12 +1,14 @@
 {
   "name": "node-tongji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A node module for Baidu Tongji Api",
   "main": "index.js",
   "keywords": [
     "baidu",
+    "Baidu",
     "tongji",
-    "Tongji API"
+    "Api",
+    "DataApi"
   ],
   "scripts": {
     "test": "node test.js"
@@ -15,7 +17,6 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.4",
-    "moment": "^2.18.1",
     "mz": "^2.6.0",
     "node-fetch": "^1.7.1"
   }
