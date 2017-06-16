@@ -8,6 +8,10 @@ This is a module for Baidu Tongji Api of Node.js 7.6+
 
 喜欢的话就给个星星吧，蟹蟹各位大佬
 
+**注意！这个是统计Api的模块，用于导出百度统计中的数据，不是埋点用的**
+
+什么是[百度TongjiApi](http://tongji.baidu.com/open/api/more?p=tongjiapi_guide.tpl)
+
 ## Installation 安装方式
 
 ```
@@ -16,6 +20,10 @@ $ npm install node-tongji --save
 
 
 ## Config 配置
+
+百度Tongji Api需要登录后才可以获取统计数据，因此，需要配置`config`来获取统计模块对象
+
+### Basic 基础字段
 
 配置项`config`中需要包含以下基础字段
 
@@ -26,9 +34,31 @@ $ npm install node-tongji --save
 | token         | 在百度统计控制台中申请的token     | string |
 | uuid          | 随便起一个乱七八糟的东西就行      | string |
 
-日志的输出等级和输出方式是可以配置的，也是在`config`中增加字段和值
 
-配置`logLevel`可以设定日志输出的等级
+
+### Optional 可选字段
+
+* `logLevel`:
+
+日志输出等级, `sting`类型, 默认值为 `info`
+
+可选值为 `log`, `debug`, `info`, `warn`, `error` 和 `fatal`
+
+* `logProvider`
+
+日志的打印方式, `function`类型, 默认使用`console`进行输出
+
+使用log4js示例如下
+
+``` js
+config.logProvider = () => {
+  const logger = require('log4js').getLogger('TAM')
+  logger.log = logger.trace
+  return logger
+}
+```
+
+_未必好用，我自己没怎么测试这块哈哈哈_
 
 
 ## Examples 示例
